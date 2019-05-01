@@ -7,14 +7,14 @@ class Config(object):
 
 
 class ProdConfig(Config):
-    ENV = 'prod'
+    ENV = "prod"
     DEBUG = False
-    DB_NAME = 'boilerplateprod'
-    GRAPHQL_DATABASE_URI = 'ComingSoon'
+    DB_NAME = "boilerplateprod"
+    GRAPHQL_DATABASE_URI = "ComingSoon"
 
 
 class DevConfig(Config):
-    ENV = 'dev'
+    ENV = "dev"
     DEBUG = True
-    DB_NAME = 'boilerplatetest'
-    GRAPHQL_DATABASE_URI = 'mongodb://localhost:27017'
+    DB_NAME = "boilerplatedev"
+    GRAPHQL_DATABASE_URI = "mongodb://localhost:27017"

@@ -13,10 +13,11 @@ from .Task import Task
 
 
 class Employee(Document):
+
     meta = {"collection": "employee"}
     name = StringField()
     hired_on = DateTimeField(default=datetime.now())
     department = ReferenceField(Department)
     roles = ListField(ReferenceField(Role))
-    leader = ReferenceField("Employee")
+    leader = ReferenceField("self")
     tasks = ListField(EmbeddedDocumentField(Task))
